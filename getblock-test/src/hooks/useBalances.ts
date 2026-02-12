@@ -33,7 +33,7 @@ export const useBalances = () => {
   });
 
   const eth = ethData 
-    ? Number(ethData.formatted).toFixed(4) 
+    ? Number(formatUnits(ethData.value, ethData.decimals)).toFixed(4) 
     : "0.0000";
 
   const usdt = (usdtRawBalance !== undefined && usdtDecimals !== undefined)
